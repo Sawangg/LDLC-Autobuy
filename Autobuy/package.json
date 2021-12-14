@@ -1,0 +1,31 @@
+{
+	"name": "ldlc-autobuy",
+	"version": "1.0.0",
+	"description": "The module that buys the cards",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc --project tsconfig.json",
+		"start": "node dist/index.js"
+	},
+	"author": "Sawang",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"discord.js": "^13.3.1",
+		"dotenv": "^10.0.0",
+		"puppeteer": "^12.0.1",
+		"puppeteer-extra": "^3.2.3",
+		"puppeteer-extra-plugin-block-resources": "^2.3.0",
+		"puppeteer-extra-plugin-stealth": "^2.9.0",
+		"socket.io": "^4.4.0",
+		"typescript": "^4.5.3"
+	},
+	"optionalDependencies": {
+		"bufferutil": "^4.0.5",
+		"utf-8-validate": "^5.0.7",
+		"zlib-sync": "^0.1.7"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.12"
+	}
+}

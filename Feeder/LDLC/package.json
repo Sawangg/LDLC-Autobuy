@@ -1,0 +1,28 @@
+{
+	"name": "ldlc-feeder",
+	"version": "1.0.0",
+	"description": "Pinging the ldlc add to cart",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc --project tsconfig.json",
+		"start": "node dist/index.js"
+	},
+	"author": "Sawang",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.24.0",
+		"chalk": "^4.1.2",
+		"random-useragent": "^0.5.0",
+		"socket.io": "^4.4.0",
+		"socket.io-client": "^4.4.0",
+		"socks-proxy-agent": "^6.1.1",
+		"typescript": "^4.5.3"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.12"
+	},
+	"optionalDependencies": {
+		"bufferutil": "^4.0.5",
+		"utf-8-validate": "^5.0.7"
+	}
+}

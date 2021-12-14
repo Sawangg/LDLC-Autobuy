@@ -1,0 +1,64 @@
+version: '3.9'
+
+services:
+  autobuy:
+    container_name: 'autobuy'
+    ports:
+      - "3000:3000"
+    build:
+      context: ./Autobuy
+      dockerfile: Dockerfile
+    environment:
+      FORCE_COLOR: 1
+    restart: always
+
+  tor:
+    container_name: 'tor'
+    ports:
+      - "9050:9050"
+      - "9052:9052"
+      - "9053:9053"
+      - "9054:9054"
+    build:
+      context: ./Tor
+      dockerfile: Dockerfile
+    restart: always
+
+  feeder3080:
+    container_name: 'ldlc-feeder-3080'
+    build:
+      context: ./Feeder/LDLC
+      dockerfile: Dockerfile
+    environment:
+      CARD_NAME: Nvidia RTX 3080
+      CARD_AR: AR202010120164
+      FORCE_COLOR: 1
+    depends_on:
+      - tor
+    restart: always
+
+  feeder3070:
+    container_name: 'ldlc-feeder-3070'
+    build:
+      context: ./Feeder/LDLC
+      dockerfile: Dockerfile
+    environment:
+      CARD_NAME: Nvidia RTX 3070
+      CARD_AR: AR202010130078
+      FORCE_COLOR: 1
+    depends_on:
+      - tor
+    restart: always
+
+  feeder3060ti:
+    container_name: 'ldlc-feeder-3060ti'
+    build:
+      context: ./Feeder/LDLC
+      dockerfile: Dockerfile
+    environment:
+      CARD_NAME: Nvidia RTX 3060TI
+      CARD_AR: AR202103150099
+      FORCE_COLOR: 1
+    depends_on:
+      - tor
+    restart: always

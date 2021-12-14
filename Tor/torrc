@@ -1,0 +1,5 @@
+SocksPort 0.0.0.0:9050
+SocksPort 0.0.0.0:9052
+SocksPort 0.0.0.0:9053
+SocksPort 0.0.0.0:9054
+MaxCircuitDirtiness 11
